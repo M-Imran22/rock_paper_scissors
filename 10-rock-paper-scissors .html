@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./10-rock-paper-scissors .css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <div>
+      <button
+        class="move-btn"
+        onclick=" 
+      playGame('rock');
+      "
+      >
+        <img src="./images/rock-emoji.png" alt="rock" class="move-icon" />
+      </button>
+      <button
+        class="move-btn"
+        onclick="   
+          playGame('paper');
+    "
+      >
+        <img src="./images/paper-emoji.png" alt="paper" class="move-icon" />
+      </button>
+      <button
+        class="move-btn"
+        onclick="   
+          playGame('scissors');
+    "
+      >
+        <img
+          src="./images/scissors-emoji.png"
+          alt="scissors"
+          class="move-icon"
+        />
+      </button>
+    </div>
+
+    <p class="resultElement result"></p>
+    <p class="moveElement"></p>
+    <p class="scoreElement score"></p>
+    <button
+      class="reset-score-btn"
+      onclick="
+      score.wins= 0;
+      score.losses= 0;
+      score.ties= 0;
+      updateScore();
+    localStorage.removeItem('score');
+    document.querySelector('.resultElement').innerHTML = `The score is reset.`;
+    "
+    >
+      Reset Score
+    </button>
+    <p class="endText">Powered by M Imran</p>
+    <script src="./rock-paper-scissors.js"></script>
+  </body>
+</html>
